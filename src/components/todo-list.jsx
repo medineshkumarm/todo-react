@@ -4,7 +4,7 @@ import Todo from './todo';
 const TodoList = () => {
     const [todos, setTodos] = useState([]);
     const [title, setTitle] = useState('');
-    const URI = import.meta.env.VITE_API_UR || "http://127.0.0.1:3000";
+    const URI = import.meta.env.VITE_API_UR;
     // console.log(URI)
     useEffect(() => {
         axios.get(`${URI}/todos`).then((response) => {

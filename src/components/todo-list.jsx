@@ -4,7 +4,7 @@ import Todo from './todo';
 const TodoList = () => {
     const [todos, setTodos] = useState([]);
     const [title, setTitle] = useState('');
-    const URI = import.meta.env.VITE_API_UR;
+    const URI = import.meta.env.VITE_API_URL;
     // console.log(URI)
     useEffect(() => {
         axios.get(`${URI}/todos`).then((response) => {
